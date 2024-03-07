@@ -1,3 +1,6 @@
+import pytest
+
+
 # This is a sample Python script.
 
 # Press ⌃R to execute it or replace it with your code.
@@ -7,10 +10,12 @@ def print_hi(name):
     print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
 
 
+def main():
+    pytest.main(["--reruns", "1", "--reruns-delay", "2"])
+
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-
+    main()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
