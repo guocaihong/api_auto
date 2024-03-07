@@ -1,6 +1,6 @@
 .pytest_cache
 report/
-
+venv/
 .project
 .settings/
 logs/
@@ -16,7 +16,7 @@ work/
 *.metadata
 *.pyc
 .idea/
-*.txt
+
 *.rar
 *.exe
 *.hprof
