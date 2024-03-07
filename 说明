@@ -1,0 +1,31 @@
+#######################
+执行范围
+#######################
+1 指定模块执行
+pytest test_mod.py
+2 指定测试目录
+pytest testing/
+3 通过包执行测试
+pytest --pyargs pkg.testing
+4 指定注解执行。这条命令会执行被装饰器 @pytest.mark.slow 装饰的所有测试用例
+pytest test_mod.py  -m slow
+5 通过 node id 指定测试用例（nodeid由模块文件名、分隔符、类名、方法名、参数构成）
+    运行模块中的指定用例：pytest test_mod.py::test_func
+    运行模块中的指定方法：ytest test_mod.py::TestClass::test_method
+
+####################
+命名规范：
+#####################
+1 在单测文件中，测试类以Test开头，并且不能带有 init 方法
+2 所有的单测文件名都需要满足test_*.py格式或*_test.py格式。
+
+######################
+执行控制
+#######################
+失败终止：--maxfail=2 # 出现2个失败就终止测试
+失败重试：--reruns 2 # 失败重试次数 pip install -U pytest-rerunfailures
+并发执行：-n 2 # 并发进程数 pip install -U pytest-xdist
+
+
+pytest api_demo/ --reruns 1 --html=./report/report.html -s
+
