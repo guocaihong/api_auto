@@ -1,3 +1,5 @@
+# encoding=utf-8
+
 import requests, pytest
 import random
 from log.log_setting import logger
