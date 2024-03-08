@@ -30,7 +30,7 @@ def test_2():
 @pytest.mark.test
 def test_queryAll():
     url = f'{java_host}/roundHistory/queryAll'
-    logger.info(url)
+    # logger.info(url)
     res = requests.get(url)
     logger.info(res.text)
     assert res.status_code == 200
