@@ -17,7 +17,7 @@ def test_insert_success():
         'kugouId': 1512159918
     }
     logger.info("请求URL："+url)
-    logger.info("请求参数："+param)
+    logger.info("请求参数："+str(param))
     res = requests.get(url, param)
     logger.info("响应："+res.text)
     assert res.status_code == 200
