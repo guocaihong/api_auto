@@ -1,9 +1,10 @@
 # encoding=utf-8
 
 import requests, pytest
+import allure
 from log.log_setting import logger
 
-
+@allure.feature('测试某个功能')
 class Test_Demo2:
     ## class级
     def setup_class(self):

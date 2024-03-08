@@ -2,11 +2,13 @@
 
 import requests, pytest
 import time, random
+import allure
 from log.log_setting import logger
 
 from config.host_config import java_host
 
 
+@allure.story('插入轮次')
 @pytest.mark.test
 def test_insert_success():
     url = f'{java_host}/roundHistory/insertRoundHistory'
